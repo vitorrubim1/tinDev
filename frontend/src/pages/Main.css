@@ -22,7 +22,7 @@
 .main-container ul li footer{
     flex: 1; /*PARA O FOTTER OCUPAR TODO O ESPAÇO DEBAIXO*/
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.267);
+    border: 1px solid #eee;
     padding: 15px 20px;
     text-align: left;
     border-radius: 0 0 5px 5px; /*SÓ EM BAIXO*/
@@ -54,4 +54,10 @@
 .main-container ul li .buttons button:hover img{
     transform: translateY(-7px);
     transition: 300ms;
+}
+.main-container .empty{
+    font-size: 32px;
+    color: #999;
+    font-weight: bold;
+    margin-top: 200px;
 }
