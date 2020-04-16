@@ -1,0 +1,40 @@
+img{
+    height: 50px;
+}
+.login-container{
+    height: 100%;
+    display: flex;
+
+    /*ALINHANDO TODO CONTEUDO AO CENTRO*/
+    justify-content: center;
+    align-items: center;
+}
+.login-container form{
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column; /*ELEMENTOS UM ABAIXO DO OUTRO*/
+}
+.login-container form input{
+    margin-top: 30px;
+    border: 1px solid #df46238f;
+    border-radius: 4px;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+.login-container form input::placeholder{
+    color: #999;
+}
+.login-container form button{
+    margin-top: 7px;
+    border: 0;
+    border-radius: 4px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #df4723;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}

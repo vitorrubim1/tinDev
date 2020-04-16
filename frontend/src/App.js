@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import './App.css'; //CSS GLOBAL
+
+import Routes from './routes'; //IMPORTANDO AS ROTAS DA APLICAÇÃO WEB
 
 //COMPONENTE, QUE RETORNA HTML
-
 function App() {
   return (
-    <h1>asiojdiaso</h1>
+    <Routes />
   );
 }
 
