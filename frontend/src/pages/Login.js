@@ -3,17 +3,26 @@ import React, { useState } from 'react';
 import './Login.css'; //CSS
 import logo from "../assets/logo.svg" //LOGO
 
+import api from '../services/api'; //IMPORTANDO A CONEXAO COM API
+
 export default function Login({ history }){
 
     const [username, setUsername] = useState('');
 
-    //FUNÇÃO QUE VAI SER DISPARADA QUANDO O INPUT FOR SUBMITADO
-    function handleSubmit(e){
-        //TIRANDO O COMPORTAMENTO DO FORMULARIO
+    //FUNÇÃO ASSÍNCRONA, QUE VAI SER DISPARADA QUANDO O INPUT FOR SUBMITADO
+    async function handleSubmit(e){
+        //TIRANDO O COMPORTAMENTO PADRÃO DO FORMULARIO
         e.preventDefault();
 
+        //AQ TEM UM AWAIT
+        const response = await api.post('/devs', { //ROTA PARA CADASTRAR DEV
+            username,
+        }); 
+
+        const { _id } = response.data; //PEGANDO O ID DO USER
+
         //PROPRIEDADE DE REDIRECIONAMENTO
-        history.push("/main");
+        history.push(`/dev/${_id}`); //PASSANDO O ID, PRO /devs 
     }
 
 

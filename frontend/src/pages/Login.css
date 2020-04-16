@@ -1,10 +1,7 @@
-img{
-    height: 50px;
-}
 .login-container{
     height: 100%;
     display: flex;
-
+    
     /*ALINHANDO TODO CONTEUDO AO CENTRO*/
     justify-content: center;
     align-items: center;
@@ -14,6 +11,9 @@ img{
     max-width: 300px;
     display: flex;
     flex-direction: column; /*ELEMENTOS UM ABAIXO DO OUTRO*/
+}
+.login-container form img{
+    height: 60px;
 }
 .login-container form input{
     margin-top: 30px;

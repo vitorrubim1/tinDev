@@ -4,7 +4,7 @@ import { BrowserRouter, Route} from 'react-router-dom';
 //BrowserRouter: ROTEAMENTO NO BROWSER
 
 import Login from './pages/Login'; //IMPORTANDO LOGIN
-import Main from './pages/Main'; //IMPORTANDO LOGIN
+import Main from './pages/Main'; //IMPORTANDO Main
 
 export default function Routes(){
     return(
@@ -15,7 +15,7 @@ export default function Routes(){
                 component: É SE ESTIVER NA ROTA PATH, CHAMA O LOGIN NESSE CASO. 
                 exact: É PQ A ROTA TEM QUE SER EXATAMENTE A QUE É PASSADA NO PATH */}
 
-            <Route path="/main" component={Main}/> {/*ROTA DE MAINS*/}
+            <Route path="/dev/:id" component={Main}/> {/*ROTA DE DEVS, QUE RECEBE UM ID*/}
         </BrowserRouter>
     );
 }
